@@ -269,7 +269,7 @@ public class LoginController implements Initializable {
                 return;
             }
 
-            String encrypt = PasswordHash.password_hash(user.getPassword());
+            String encryptPassword = PasswordHash.password_hash(user.getPassword());
 
             prepare = connect.prepareStatement(sql);
             prepare.setString(1, user.getName());
@@ -277,7 +277,7 @@ public class LoginController implements Initializable {
             prepare.setString(3, user.getEmail());
             prepare.setString(4, user.getCourse());
             prepare.setString(5, user.getYear());
-            prepare.setString(6, encrypt);
+            prepare.setString(6, encryptPassword);
             prepare.executeUpdate();
 
             showAlert(AlertType.INFORMATION, "Approval message",
