@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="506.0" style="-fx-background-color: #b8b8b8ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="37.0" prefHeight="607.0" prefWidth="501.0" stylesheets="@../stylesheets/login_ui.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+            <String fx:value="main-background" />
+         </styleClass>
+         <children>
+            <AnchorPane fx:id="login_form" layoutX="3.0" layoutY="9.0" prefHeight="591.0" prefWidth="501.0">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="231.0" layoutY="91.0" size="80" styleClass="shadow" />
+                  <Text fill="WHITE" layoutX="156.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="SIGN IN">
+                     <font>
+                        <Font name="Arial Black" size="49.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="usernameField" layoutX="80.0" layoutY="205.0" prefHeight="55.0" prefWidth="379.0" promptText="Username or Email">
+                     <styleClass>
+                        <String fx:value="textField" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="FontAwesome Regular" size="17.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER_SECRET" layoutX="24.0" layoutY="248.0" size="45" styleClass="shadow" />
+                  <PasswordField fx:id="passwordField" layoutX="80.0" layoutY="281.0" prefHeight="55.0" prefWidth="379.0" promptText="Password">
+                     <styleClass>
+                        <String fx:value="textField" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </PasswordField>
+                  <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="27.0" layoutY="326.0" size="50" styleClass="shadow" />
+                  <Button fx:id="loginbtn" layoutX="139.0" layoutY="352.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="45.0" prefWidth="247.0" text="Log in" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnLogin" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Hyperlink layoutX="190.0" layoutY="417.0" onAction="#createAccount" styleClass="shadow" text="Create account" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <Text fx:id="errorHandler" layoutX="19.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" textAlignment="CENTER" wrappingWidth="463.5">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form" layoutX="2.0" layoutY="4.0" prefHeight="599.0" prefWidth="501.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" layoutX="206.0" layoutY="70.0" size="80" />
+                  <Text fill="WHITE" layoutX="153.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP">
+                     <font>
+                        <Font name="Arial Black" size="42.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="new_name" layoutX="62.0" layoutY="134.0" prefHeight="45.0" prefWidth="379.0" promptText="Fullname" styleClass="textField" />
+                  <TextField fx:id="new_username" layoutX="61.0" layoutY="187.0" prefHeight="45.0" prefWidth="379.0" promptText="Username" styleClass="textField" />
+                  <TextField fx:id="new_email" layoutX="61.0" layoutY="241.0" prefHeight="45.0" prefWidth="379.0" promptText="Email" styleClass="textField" />
+                  <PasswordField fx:id="new_password" layoutX="61.0" layoutY="399.0" prefHeight="45.0" prefWidth="379.0" promptText="Password">
+                     <styleClass>
+                        <String fx:value="textField" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </PasswordField>
+                  <PasswordField fx:id="new_retype_password" layoutX="61.0" layoutY="453.0" prefHeight="45.0" prefWidth="379.0" promptText="Re-type password">
+                     <styleClass>
+                        <String fx:value="textField" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </PasswordField>
+                  <ComboBox fx:id="chooseCourse" layoutX="62.0" layoutY="295.0" prefHeight="45.0" prefWidth="379.0" promptText="Course" styleClass="textField" />
+                  <Button layoutX="138.0" layoutY="513.0" mnemonicParsing="false" onAction="#btnSignUp" prefHeight="45.0" prefWidth="225.0" text="Sign up" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnLogin" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Hyperlink layoutX="125.0" layoutY="568.0" onAction="#alreadyHaveAccount" text="Already have an account?" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="17.0" />
+                     </font>
+                  </Hyperlink>
+                  <ComboBox fx:id="chooseYear" layoutX="62.0" layoutY="347.0" prefHeight="45.0" prefWidth="379.0" promptText="Year" styleClass="textField" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="34.0" prefWidth="506.0" stylesheets="@../stylesheets/login_ui.css">
+         <styleClass>
+            <String fx:value="toprow" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Button layoutX="438.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnClose" prefHeight="23.0" prefWidth="63.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="20" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="btnClose" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="369.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="23.0" prefWidth="63.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="18" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="btnMinimize" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

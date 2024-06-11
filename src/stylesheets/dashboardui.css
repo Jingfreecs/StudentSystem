@@ -1,0 +1,16 @@
+.toprow{
+    -fx-background-color: #b2b2b2;
+}
+
+.side-bg{
+    -fx-background-color: linear-gradient(#d8d8d8, #686D76, #373A40, #DC5F00);
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 6, 0, 0, 0);
+}
+
+.white-bg{
+    -fx-background-color: #eee;
+    -fx-background-radius: 10px;
+}
